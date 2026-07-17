@@ -4,6 +4,7 @@
   "description": "韩左券的 AI 与金融科技个人作品集",
   "author": "韩左券",
   "version": "0.0.1",
+  "packageManager": "pnpm@11.9.0",
   "engines": {
     "node": ">=22.12.0"
   },

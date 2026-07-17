@@ -76,8 +76,8 @@ export const DATA = {
     },
   ],
   education: [
-    { school: "华中科技大学", href: "https://www.hust.edu.cn/", degree: "金融学硕士（在读）｜校二等奖学金", detail: "量化投资、公司金融、证券投资学、机器学习", start: "2024", end: "2027（预计）" },
-    { school: "宁波财经学院", href: "https://www.nbufe.edu.cn/", degree: "计算机相关专业本科", detail: "第八届中国国际“互联网+”大学生创新创业大赛省级银奖", start: "本科", end: "已毕业" },
+    { school: "华中科技大学", href: "https://www.hust.edu.cn/", degree: "金融学硕士（在读）", detail: "", start: "2025", end: "2027（预计）" },
+    { school: "宁波财经学院", href: "https://www.nbufe.edu.cn/", degree: "计算机相关专业本科", detail: "", start: "2018", end: "2022" },
   ],
   projects: [
     {

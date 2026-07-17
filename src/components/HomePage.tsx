@@ -72,7 +72,7 @@ function Education() {
             <a href={item.href} target="_blank" rel="noreferrer">
               {item.school}<ExternalLink aria-hidden="true" />
             </a>
-            <p>{item.detail}</p>
+            {item.detail && <p>{item.detail}</p>}
           </article>
         ))}
       </div>

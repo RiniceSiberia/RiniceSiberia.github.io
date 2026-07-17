@@ -2,7 +2,6 @@
 import "../styles/global.css";
 import { DATA } from "@/data/resume";
 import { CONFIG } from "@/data/config";
-import NavbarIsland from "@/components/NavbarIsland";
 import { absoluteUrl, withBase } from "@/lib/urls";
 
 interface Props {
@@ -29,83 +28,13 @@ const ogImage = image
     : absoluteUrl(image, siteUrl)
   : absoluteUrl(DATA.ogImage, siteUrl);
 
-const { light, dark, radius } = CONFIG.theme;
-const { baseFontSize } = CONFIG.typography;
 ---
 
-<html
-  lang={CONFIG.site.locale.split("_")[0]}
-  style={`font-size: ${baseFontSize}%;`}
->
+<html lang={CONFIG.site.locale.split("_")[0]}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
-
-    <!-- FOUC prevention: apply stored theme before first paint -->
-    <script is:inline>
-      (function () {
-        try {
-          var theme = localStorage.getItem("theme");
-          if (
-            theme === "dark" ||
-            (!theme &&
-              window.matchMedia("(prefers-color-scheme: dark)").matches)
-          ) {
-            document.documentElement.classList.add("dark");
-          } else {
-            document.documentElement.classList.remove("dark");
-          }
-        } catch (_) {}
-      })();
-    </script>
-
-    <!-- Theme variables from config.ts -->
-    <style
-      set:html={`
-      :root {
-        --radius: ${radius};
-        --background: ${light.background};
-        --foreground: ${light.foreground};
-        --card: ${light.card};
-        --card-foreground: ${light.cardForeground};
-        --popover: ${light.popover};
-        --popover-foreground: ${light.popoverForeground};
-        --primary: ${light.primary};
-        --primary-foreground: ${light.primaryForeground};
-        --secondary: ${light.secondary};
-        --secondary-foreground: ${light.secondaryForeground};
-        --muted: ${light.muted};
-        --muted-foreground: ${light.mutedForeground};
-        --accent: ${light.accent};
-        --accent-foreground: ${light.accentForeground};
-        --destructive: ${light.destructive};
-        --border: ${light.border};
-        --input: ${light.input};
-        --ring: ${light.ring};
-      }
-      .dark {
-        --background: ${dark.background};
-        --foreground: ${dark.foreground};
-        --card: ${dark.card};
-        --card-foreground: ${dark.cardForeground};
-        --popover: ${dark.popover};
-        --popover-foreground: ${dark.popoverForeground};
-        --primary: ${dark.primary};
-        --primary-foreground: ${dark.primaryForeground};
-        --secondary: ${dark.secondary};
-        --secondary-foreground: ${dark.secondaryForeground};
-        --muted: ${dark.muted};
-        --muted-foreground: ${dark.mutedForeground};
-        --accent: ${dark.accent};
-        --accent-foreground: ${dark.accentForeground};
-        --destructive: ${dark.destructive};
-        --border: ${dark.border};
-        --input: ${dark.input};
-        --ring: ${dark.ring};
-      }
-    `}
-    ></style>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href={withBase("/favicon.svg")} />
@@ -137,13 +66,9 @@ const { baseFontSize } = CONFIG.typography;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
   </head>
-  <body class="min-h-screen overflow-x-hidden bg-background font-sans antialiased relative">
-    <div class="page-grid" aria-hidden="true"></div>
-    <div class="relative z-10 max-w-6xl mx-auto py-8 pb-28 sm:py-14 px-5 sm:px-8">
+  <body>
+    <div class="site-frame">
       <slot />
     </div>
-
-    <!-- Navbar: ThemeProvider + TooltipProvider + Navbar all in one React island -->
-    <NavbarIsland client:load />
   </body>
 </html>

@@ -3,9 +3,9 @@ export const CONFIG = {
   // Site Settings
   // ---------------------------------------------------------------------------
   site: {
-    url: "https://alexmercer.dev",
-    locale: "en_US",
-    twitterHandle: "@alexmercer_dev",
+    url: "https://rinicesiberia.github.io",
+    locale: "zh_CN",
+    twitterHandle: "",
   },
 
   // ---------------------------------------------------------------------------
@@ -23,14 +23,7 @@ export const CONFIG = {
   typography: {
     // Base font size as a percentage. 100 = browser default (16px).
     // 110 = 10% larger or 90 = 10% smaller, across all text, headings, and links simultaneously.
-    baseFontSize: 115,
-  },
-
-  // ---------------------------------------------------------------------------
-  // Blog Settings
-  // ---------------------------------------------------------------------------
-  blog: {
-    postsPerPage: 10,
+    baseFontSize: 100,
   },
 
   // ---------------------------------------------------------------------------
@@ -49,48 +42,48 @@ export const CONFIG = {
   // ---------------------------------------------------------------------------
 
   theme: {
-    radius: "0.625rem",
+    radius: "0.35rem",
 
     light: {
-      background: "oklch(1 0 0)",
-      foreground: "oklch(0.145 0 0)",
-      card: "oklch(1 0 0)",
-      cardForeground: "oklch(0.145 0 0)",
-      popover: "oklch(1 0 0)",
-      popoverForeground: "oklch(0.145 0 0)",
-      primary: "oklch(0.205 0 0)",
-      primaryForeground: "oklch(0.985 0 0)",
-      secondary: "oklch(0.97 0 0)",
-      secondaryForeground: "oklch(0.205 0 0)",
-      muted: "oklch(0.97 0 0)",
-      mutedForeground: "oklch(0.556 0 0)",
-      accent: "oklch(0.97 0 0)",
-      accentForeground: "oklch(0.205 0 0)",
+      background: "#f3f6f7",
+      foreground: "#122238",
+      card: "#f9fbfb",
+      cardForeground: "#122238",
+      popover: "#f9fbfb",
+      popoverForeground: "#122238",
+      primary: "#15324d",
+      primaryForeground: "#f8fbfc",
+      secondary: "#e6ecef",
+      secondaryForeground: "#15324d",
+      muted: "#e8edef",
+      mutedForeground: "#657485",
+      accent: "#dbe8ee",
+      accentForeground: "#15324d",
       destructive: "oklch(0.577 0.245 27.325)",
-      border: "oklch(0.922 0 0)",
-      input: "oklch(0.922 0 0)",
-      ring: "oklch(0.708 0 0)",
+      border: "#cfd9de",
+      input: "#cfd9de",
+      ring: "#367d9f",
     },
 
     dark: {
-      background: "oklch(0.18 0 0)",
-      foreground: "oklch(0.985 0 0)",
-      card: "oklch(0.205 0 0)",
-      cardForeground: "oklch(0.985 0 0)",
-      popover: "oklch(0.205 0 0)",
-      popoverForeground: "oklch(0.985 0 0)",
-      primary: "oklch(0.922 0 0)",
-      primaryForeground: "oklch(0.205 0 0)",
-      secondary: "oklch(0.269 0 0)",
-      secondaryForeground: "oklch(0.985 0 0)",
-      muted: "oklch(0.269 0 0)",
-      mutedForeground: "oklch(0.708 0 0)",
-      accent: "oklch(0.269 0 0)",
-      accentForeground: "oklch(0.985 0 0)",
+      background: "#0d1722",
+      foreground: "#edf3f5",
+      card: "#13212e",
+      cardForeground: "#edf3f5",
+      popover: "#13212e",
+      popoverForeground: "#edf3f5",
+      primary: "#dfe9ed",
+      primaryForeground: "#102033",
+      secondary: "#1c2c3b",
+      secondaryForeground: "#edf3f5",
+      muted: "#1a2936",
+      mutedForeground: "#99a8b4",
+      accent: "#213848",
+      accentForeground: "#edf3f5",
       destructive: "oklch(0.704 0.191 22.216)",
-      border: "oklch(1 0 0 / 10%)",
-      input: "oklch(1 0 0 / 15%)",
-      ring: "oklch(0.556 0 0)",
+      border: "#2b3c4a",
+      input: "#2b3c4a",
+      ring: "#6aa7c2",
     },
   },
 

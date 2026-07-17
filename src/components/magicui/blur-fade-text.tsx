@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { motion, type Variants } from "motion/react";
+import { motion, useReducedMotion, type Variants } from "motion/react";
 import { useMemo } from "react";
 
 interface BlurFadeTextProps {
@@ -25,6 +25,7 @@ const BlurFadeText = ({
   yOffset = 8,
   animateByCharacter = false,
 }: BlurFadeTextProps) => {
+  const shouldReduceMotion = useReducedMotion();
   const defaultVariants: Variants = {
     hidden: { y: -yOffset, opacity: 0, filter: "blur(8px)" },
     visible: { y: 0, opacity: 1, filter: "blur(0px)" },
@@ -43,12 +44,12 @@ const BlurFadeText = ({
           return (
             <motion.span
               key={i}
-              initial="hidden"
+              initial={shouldReduceMotion ? false : "hidden"}
               animate="visible"
               variants={charVariants}
               transition={{
-                duration,
-                delay: delay + i * characterDelay,
+                duration: shouldReduceMotion ? 0 : duration,
+                delay: shouldReduceMotion ? 0 : delay + i * characterDelay,
                 ease: "easeOut",
               }}
               className={cn("inline-block", className)}
@@ -65,12 +66,12 @@ const BlurFadeText = ({
   return (
     <div className="flex">
       <motion.span
-        initial="hidden"
+        initial={shouldReduceMotion ? false : "hidden"}
         animate="visible"
         variants={combinedVariants}
         transition={{
-          duration,
-          delay,
+          duration: shouldReduceMotion ? 0 : duration,
+          delay: shouldReduceMotion ? 0 : delay,
           ease: "easeOut",
         }}
         className={cn("inline-block", className)}

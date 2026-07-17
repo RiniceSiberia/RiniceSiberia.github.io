@@ -3,7 +3,7 @@ import "../styles/global.css";
 import { DATA } from "@/data/resume";
 import { CONFIG } from "@/data/config";
 import NavbarIsland from "@/components/NavbarIsland";
-import { FlickeringGrid } from "@/components/magicui/flickering-grid";
+import { absoluteUrl, withBase } from "@/lib/urls";
 
 interface Props {
   title?: string;
@@ -12,11 +12,12 @@ interface Props {
   canonicalURL?: string;
 }
 
+const siteUrl = Astro.site?.origin ?? CONFIG.site.url;
 const {
   title,
   description = DATA.description,
   image,
-  canonicalURL = Astro.url.href,
+  canonicalURL = absoluteUrl(Astro.url.pathname, siteUrl),
 } = Astro.props;
 
 const pageTitle = title
@@ -25,8 +26,8 @@ const pageTitle = title
 const ogImage = image
   ? image.startsWith("http")
     ? image
-    : `${CONFIG.site.url}${image}`
-  : `${CONFIG.site.url}${DATA.ogImage}`;
+    : absoluteUrl(image, siteUrl)
+  : absoluteUrl(DATA.ogImage, siteUrl);
 
 const { light, dark, radius } = CONFIG.theme;
 const { baseFontSize } = CONFIG.typography;
@@ -107,8 +108,7 @@ const { baseFontSize } = CONFIG.typography;
     ></style>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href={withBase("/favicon.svg")} />
 
     <!-- Primary meta -->
     <title>{pageTitle}</title>
@@ -137,23 +137,9 @@ const { baseFontSize } = CONFIG.typography;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
   </head>
-  <body class="min-h-screen bg-background font-sans antialiased relative">
-    <!-- FlickeringGrid header background - matches template exactly -->
-    <div class="absolute inset-0 top-0 left-0 right-0 h-25 overflow-hidden z-0">
-      <FlickeringGrid
-        client:load
-        className="h-full w-full"
-        squareSize={2}
-        gridGap={2}
-        style={{
-          maskImage: "linear-gradient(to bottom, black, transparent)",
-          WebkitMaskImage: "linear-gradient(to bottom, black, transparent)",
-        }}
-      />
-    </div>
-
-    <!-- Main content wrapper - matches template's z-10 container exactly -->
-    <div class="relative z-10 max-w-2xl mx-auto py-12 pb-24 sm:py-24 px-6">
+  <body class="min-h-screen overflow-x-hidden bg-background font-sans antialiased relative">
+    <div class="page-grid" aria-hidden="true"></div>
+    <div class="relative z-10 max-w-6xl mx-auto py-8 pb-28 sm:py-14 px-5 sm:px-8">
       <slot />
     </div>
 

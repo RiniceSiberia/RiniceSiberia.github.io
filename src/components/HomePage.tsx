@@ -106,27 +106,36 @@ function Projects() {
   return (
     <section id="projects" className="plain-section">
       <SectionTitle>代表项目</SectionTitle>
-      <div className="simple-projects">
-        {DATA.projects.map((project) => (
-          <article key={project.title}>
-            <div className="project-heading">
-              <div>
+      <div className="project-grid">
+        {DATA.projects.map((project) => {
+          const content = (
+            <>
+              <div className="project-card-topline">
                 <span>{project.kicker}</span>
-                <h3>{project.title}</h3>
+                <time>{project.dates}</time>
               </div>
-              <time>{project.dates}</time>
-            </div>
-            <p>{project.description}</p>
-            <div className="project-meta">
-              <div>{project.technologies.map((item) => <span key={item}>{item}</span>)}</div>
-              {project.href && (
-                <a href={project.href} target="_blank" rel="noreferrer">
-                  <Icons.github aria-hidden="true" />源码
-                </a>
-              )}
-            </div>
-          </article>
-        ))}
+              <h3>
+                {project.title}
+                {project.private && <small>Private</small>}
+              </h3>
+              <p>{project.description}</p>
+              <div className="project-card-footer">
+                <div>{project.technologies.slice(0, 4).map((item) => <span key={item}>{item}</span>)}</div>
+                {project.href && <Icons.github aria-hidden="true" />}
+              </div>
+            </>
+          );
+
+          return project.href ? (
+            <a className="project-card" key={project.title} href={project.href} target="_blank" rel="noreferrer" aria-label={`在 GitHub 查看 ${project.title}`}>
+              {content}
+            </a>
+          ) : (
+            <article className="project-card project-card-private" key={project.title}>
+              {content}
+            </article>
+          );
+        })}
       </div>
     </section>
   );

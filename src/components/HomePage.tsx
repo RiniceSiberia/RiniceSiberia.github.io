@@ -75,7 +75,6 @@ function Education() {
       <div className="simple-timeline">
         {DATA.education.map((item) => (
           <article key={item.school}>
-            <div className="timeline-dot" aria-hidden="true" />
             <time>{item.start} — {item.end}</time>
             <h3>{item.degree}</h3>
             <a href={item.href} target="_blank" rel="noreferrer">

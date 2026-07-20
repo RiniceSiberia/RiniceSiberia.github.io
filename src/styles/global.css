@@ -265,36 +265,12 @@ a:focus-visible {
 }
 
 .simple-timeline {
-  position: relative;
-  margin-left: 9px;
-  padding-left: 34px;
-}
-
-.simple-timeline::before {
-  position: absolute;
-  top: 8px;
-  bottom: 12px;
-  left: 8px;
-  width: 2px;
-  content: "";
-  background: #9ba9ba;
+  display: grid;
+  gap: 22px;
 }
 
 .simple-timeline article {
-  position: relative;
-  padding-bottom: 22px;
-}
-
-.timeline-dot {
-  position: absolute;
-  top: 4px;
-  left: -35px;
-  width: 18px;
-  height: 18px;
-  border: 4px solid #ffffff;
-  border-radius: 50%;
-  background: #3157e8;
-  box-shadow: 0 0 0 2px #71849b;
+  padding: 0;
 }
 
 .simple-timeline time,

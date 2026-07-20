@@ -1,0 +1,95 @@
+export const EN = {
+  name: "Han Zuoquan",
+  role: "AI & FinTech R&D | Models, Data, and Product Delivery",
+  location: "Lujiazui, Shanghai",
+  navigation: { about: "About", work: "Experience", projects: "Projects", resume: "Résumé" },
+  sections: {
+    about: "About Me",
+    education: "Education",
+    work: "Experience",
+    projects: "Selected Projects",
+    skills: "Skills & Tools",
+    awards: "Competitions & Practice",
+  },
+  profile: { photoAlt: "Portrait of Han Zuoquan", download: "Download Résumé" },
+  education: [
+    { school: "Huazhong University of Science and Technology", degree: "M.S. in Finance (in progress)", end: "2027 (expected)" },
+    { school: "Ningbo University of Finance & Economics", degree: "B.S. in Computer Science and Technology", end: "2022" },
+  ],
+  work: [
+    {
+      company: "Wuhan Z-Bank",
+      location: "Wuhan",
+      title: "Risk Management Intern · Software Development Intern",
+      description: "Built a complaint-data collection and analysis pipeline and integrated large language models for summarization, classification, and statistics, reducing manual processing by about 90%. Designed a lightweight agent workflow, researched banking AI use cases, and refactored loan and customer-information services in Kotlin.",
+    },
+    {
+      company: "Wenzhou Yunzhi Information Technology Co., Ltd.",
+      location: "Wenzhou",
+      title: "Backend Software Engineer",
+      description: "Translated client interviews into product requirements and developed river-inspection, reporting, remediation, and access-control modules with Java and Spring Boot. Migrated the database to PostgreSQL and reduced average query latency by more than 95% through structural refactoring.",
+    },
+  ],
+  projects: [
+    {
+      title: "SAMBA · Equity Return and Risk Modeling",
+      kicker: "Finance · AI · Open Source",
+      dates: "Mar 2026 — May 2026",
+      description: "A Graph-Mamba research framework for U.S. equity forecasting, covering multi-stock datasets, technical and macro indicators, model training, conventional baselines, and backtesting, with market-wide batch processing and resumable runs.",
+      technologies: ["Graph-Mamba", "Factor Engineering", "Backtesting", "Risk Control"],
+    },
+    {
+      title: "JobClaw · Job Search Automation Assistant",
+      kicker: "AI · Automation · Open Source",
+      dates: "Ongoing",
+      description: "An automation assistant for job discovery, preference matching, AI screening, login diagnostics, and application workflows, with Playwright, cookies, and history records for traceable execution.",
+      technologies: ["Python", "AI Screening", "Playwright", "Automation"],
+    },
+    {
+      title: "Antinomy · Turn-Based Board and Card System",
+      kicker: "Kotlin · Game Systems · Open Source",
+      dates: "1.0.0 ALPHA",
+      description: "A turn-based board and card project built with Kotlin and Ktor. Its Ktor branch separates game rules, data access, business services, and frontend interaction into five Gradle modules, with port abstractions for scenarios, mods, and localization.",
+      technologies: ["Kotlin", "Ktor 3", "Coroutines", "PostgreSQL"],
+    },
+    {
+      title: "Digital Corporate Finance Teaching Platform",
+      kicker: "Finance · Data Product",
+      dates: "Sep 2025 — Dec 2025",
+      description: "A teaching platform for Corporate Finance and Case Analysis that connects Wind, CSMAR, and PostgreSQL, validates financial fields, generates an eight-week course plan, and provides DCF and sensitivity analysis workflows.",
+      technologies: ["CSMAR", "Wind", "PostgreSQL", "Streamlit"],
+    },
+    {
+      title: "CommoSpectro · Commodity Time-Series Forecasting",
+      kicker: "Finance · AI · Time Series",
+      dates: "Ongoing",
+      description: "A rolling one-step forecasting study for global commodity indices under consistent splits, seeds, and validation criteria. CommoSpectroNet combines TCN, STFT features, Drift/AR soft priors, near-term baselines, and optional exogenous variables.",
+      technologies: ["PyTorch", "TCN", "STFT", "Time-Series Forecasting"],
+    },
+    {
+      title: "MADTAGen · Drug–Target Affinity Modeling",
+      kicker: "AI · Drug Discovery",
+      dates: "Sep 2025 — Mar 2026",
+      description: "A collaboration with Wuhan Union Hospital on drug-activity prediction and molecular generation. Compared Transformer, Informer, Mamba, and hybrid architectures, and translated medical feedback into model components, visualization interfaces, and APIs.",
+      technologies: ["PyTorch", "Mamba", "Transformer", "Model Evaluation"],
+    },
+  ],
+  skills: [
+    { group: "Modeling & Research", items: ["Python", "PyTorch", "Machine Learning", "Time-Series Modeling", "Ablation Studies", "Quantitative Backtesting"] },
+    { group: "Data Engineering", items: ["PostgreSQL", "Data Collection", "Feature Engineering", "NLP", "Data Visualization"] },
+    { group: "Software Development", items: ["Kotlin", "Java", "Spring Boot", "REST APIs", "AI Agents", "Streamlit"] },
+  ],
+  awards: [
+    {
+      title: "10th China Merchants Bank Training Camp · AI Product Track",
+      location: "AI Assistant for Insurance Needs Discovery",
+      description: "Designed user profiles, needs segmentation, product matching, and lead-routing workflows, and delivered an award-winning ten-page product proposal.",
+    },
+    {
+      title: "8th China International College Students’ Innovation Competition",
+      location: "Provincial Silver Award",
+      description: "Contributed to AI motion capture, model rendering, and platform design; integrated Ruby, Python, and TypeScript services with Java Spring Boot and supported business-model and pitch materials.",
+    },
+  ],
+  footer: { title: "Han Zuoquan · AI & FinTech", contact: "Contact Me" },
+} as const;

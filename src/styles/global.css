@@ -248,6 +248,22 @@ a:focus-visible {
   margin: 0 0 14px;
 }
 
+.about-text a {
+  margin: 0 2px;
+  color: #3157e8;
+  font-weight: 600;
+}
+
+.about-text a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.about-text strong {
+  color: #26364c;
+  font-weight: 700;
+}
+
 .simple-timeline {
   position: relative;
   margin-left: 9px;

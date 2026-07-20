@@ -50,9 +50,18 @@ function About() {
     <section id="about" className="plain-section">
       <SectionTitle>关于我</SectionTitle>
       <div className="about-text">
-        <p>{DATA.summary}</p>
         <p>
-          当前就读于华中科技大学金融学硕士项目，具备计算机本科背景。主要关注机器学习、量化研究、金融数据工程与 AI 产品实现。
+          你好，我是<strong>韩左券</strong>。目前在
+          <a href="https://www.hust.edu.cn/" target="_blank" rel="noreferrer">华中科技大学</a>
+          攻读金融学硕士，师从<strong>陈舜老师</strong>，主要研究金融时序模型，并持续关注 AI 金融大模型的应用。此前，我在
+          <a href="https://www.nbufe.edu.cn/" target="_blank" rel="noreferrer">宁波财经学院</a>
+          完成计算机相关专业本科学习。
+        </p>
+        <p>
+          目前，我主要围绕股票收益与风险建模、大宗商品指数预测和金融数据工程开展项目实践。我希望把模型研究做成可复现的实验和可运行的系统。如果你对金融时序模型、AI 金融应用或相关项目感兴趣，欢迎与我交流。
+        </p>
+        <p>
+          <strong>个人特点：</strong>我做事积极、务实，习惯把目标拆成可验证的步骤，并在协作中保持清晰沟通。我长期保持规律运动和稳定精力，面对高强度学习与开发任务能够持续推进；性格开朗，愿意承担责任，也乐于快速补齐陌生领域的知识。
         </p>
       </div>
     </section>

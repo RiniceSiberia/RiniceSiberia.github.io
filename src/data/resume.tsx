@@ -12,7 +12,7 @@ export const DATA = {
   locationLink: "https://www.google.com/maps/search/?api=1&query=%E4%B8%8A%E6%B5%B7%E5%B8%82%E6%B5%A6%E4%B8%9C%E6%96%B0%E5%8C%BA%E4%B8%9C%E6%96%B9%E8%B7%AF",
   description: "华中科技大学金融学硕士在读，具备计算机本科背景。关注机器学习、量化研究与 AI 产品工程。",
   summary:
-    "我习惯从业务口径与数据质量开始拆解问题，再完成建模、实验、接口和可视化交付。过去的实践覆盖药物—靶点亲和力预测、股票收益与风险建模、公司金融教学数据平台，以及银行风控自动化。希望在 AI 或金融科技岗位中，继续做能被验证、也能真正进入工作流的系统。",
+    "华中科技大学金融学硕士在读，师从陈舜老师，主要研究金融时序模型与 AI 金融大模型应用，具备计算机本科背景。",
   avatarUrl: withBase("/profile/han-zuoquan.jpg"),
   resumeUrl: withBase("/profile/韩左券-简历.pdf"),
   ogImage: withBase("/profile/han-zuoquan.jpg"),

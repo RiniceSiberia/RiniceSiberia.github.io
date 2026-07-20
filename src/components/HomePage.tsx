@@ -55,7 +55,7 @@ function About() {
           <a href="https://www.hust.edu.cn/" target="_blank" rel="noreferrer">华中科技大学</a>
           攻读金融学硕士，师从<strong>陈舜老师</strong>，主要研究金融时序模型，并持续关注 AI 金融大模型的应用。此前，我在
           <a href="https://www.nbufe.edu.cn/" target="_blank" rel="noreferrer">宁波财经学院</a>
-          完成计算机相关专业本科学习。
+          获得计算机科学与技术学士学位。
         </p>
         <p>
           目前，我主要围绕股票收益与风险建模、大宗商品指数预测和金融数据工程开展项目实践。我希望把模型研究做成可复现的实验和可运行的系统。如果你对金融时序模型、AI 金融应用或相关项目感兴趣，欢迎与我交流。

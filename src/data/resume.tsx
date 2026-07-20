@@ -77,7 +77,7 @@ export const DATA = {
   ],
   education: [
     { school: "华中科技大学", href: "https://www.hust.edu.cn/", degree: "金融学硕士（在读）", detail: "", start: "2025", end: "2027（预计）" },
-    { school: "宁波财经学院", href: "https://www.nbufe.edu.cn/", degree: "计算机相关专业本科", detail: "", start: "2018", end: "2022" },
+    { school: "宁波财经学院", href: "https://www.nbufe.edu.cn/", degree: "计算机科学与技术学士", detail: "", start: "2018", end: "2022" },
   ],
   projects: [
     {
